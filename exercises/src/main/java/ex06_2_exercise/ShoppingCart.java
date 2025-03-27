@@ -21,7 +21,7 @@ public class ShoppingCart {
 
         // Assign one item to another and run it again.
         item1 = item2;
-        System.out.println("Updated item1: " + item1.desc);
+        System.out.println("\nUpdated item1: " + item1.desc);
         System.out.println("Updated item2: " + item2.desc);
     }
 

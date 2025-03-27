@@ -32,6 +32,7 @@ public class ShoppingCart {
         System.out.println(message);
 
         // Iterate through and print out the items from the items array
+        System.out.println("\nItems purchased: ");
         for (String item : items) {
             System.out.println("- " + item);
         }
