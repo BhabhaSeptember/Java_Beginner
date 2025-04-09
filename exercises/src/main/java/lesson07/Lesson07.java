@@ -74,57 +74,168 @@ public class Lesson07 {
 
 
 //      PRIMITIVE DATA TYPES
+// NOTES:
+// Integral Types: byte, short, int, long
+// Floating Point Types: float, double
+// Textual Type: char
+// Constants: (use 'final' keyword)
+// Modulus Operator (%)
+
+
 //System.out.println("\n ======= Primitive Data Types ========");
+
+// Increment & decrement operators:
 //int count = 15;
 //int a, b, c, d;
 //
-//a = count++; //increment stored in memory
-//b = count; // increment displays
-//c = ++count; //increment displays immediatley
-//d = count; //incremment from above displays
+//a = count++; //1. increment stored in memory i.e. 15
+//b = count; //2. increment is now displayed i.e. 16
+//c = ++count; //3. increment displays immediatley i.e. 17
+//d = count; //4. incremment from above displays i.e. 17
 //        System.out.println(a + ", " + b + ", " + c + ", "+ d);
 //   
 
-
-//===========================================================================
-//===========================================================================
-//===========================================================================
-//===========================================================================
-
-
 //      PROMOTION & CASTING
-// EXAMPLE 1:
+
+ // Caution with Promotion: 
+// // EXAMPLE1:
+// //equation => 55_555 * 66_666 = 3_703_629_630
+// int num1 = 55_555;
+// int num2 = 66_666;
+// long num3;       
+// num3 = num1 * num2; //result is due to int container being too small to hold the resultant value hence incorrect answer
+// System.out.println(num1 * num2 ); //output = -591_337_666 (incorrect result)
+
+// //Solution to above:
+// int num1 = 55_555;
+// long num2 = 66_666;
+// long num3;
+// num3 = num1 * num2;
+//        System.out.println(num3); //output = 3_703_629_630 (correct input)
+
+
+// // EXAMPLE2:
+// // equation = 7/2 = 3.5
+//int num1 = 7;
+//int num2 = 2;
+//double num3;
+//num3 = num1 / num2;
+//        System.out.println(num3); //output = 3.0 (incorrect)
+
+// solution: 
+//int num1 = 7;
+//double num2 = 2;
+//double num3;
+//num3 = num1 / num2;
+//        System.out.println(num3); //output = 3.5 (correct)
+//
+//        
+
+
+// // TYPE CASTING
+// // chops a value down to use a smaller amount of memory 
+// // e.g. converting long to int
+
+// // Caution with Type Casting:
+// // EXAMPLE1:
+//int myInt;
+//long myLong = 123_987_654_321L;
+//myInt = (int) (myLong); //(incorrect) output = -566_397_263 i.e. number is chopped
+//        System.out.println(myInt);
+        
+
+//// Safer solution:        
+//int myInt;
+//long myLong = 99L;
+//myInt = (int) (myLong);
+//        System.out.println(myInt); // (correct) output = 99 (correct)
+
+
+
+//// // EXAMPLE2:
+//int myInt;
+//double myPercent = 51.9;
+//myInt = (int) (myPercent);
+//        System.out.println(myInt);
+
+// // Using Promotion & Casting
+//  //EXAMPLE1:
 //int num1 = 53;
 //int num2 = 47;
-//byte num3;
+//byte num3; //smaller data type
+//num3 = (num1 + num2); //compiler error (possible loss of precision)
+//        System.out.println(num3); //output - compiler error
 //
-//num3 = (num1 + num2); //compiler error
-        System.out.println(num3); //compiler error
-
-//EXAMPLE 2:
-// Solution Using Larger Type For num3
+//// Solution Using Larger Type For num3
 //int num1 = 53;
 //int num2 = 47;
 //int num3;
-//num3 = (num1 + num2);
-//        System.out.println(num3);
+//num3 = (num1 + num2); 
+//        System.out.println(num3); //correct output = 100
+// 
 
+////Solution Using Casting
+//int num1 = 53;
+//int num2 = 47;
+//byte num3;
+//num3 = (byte) (num1 + num2);
+//        System.out.println(num3); //correct output = 100
 
-//EXAMPLE 3:
-//Solution Using Casting
-int num1 = 53;
-int num2 = 47;
-byte num3;
-num3 = (byte) (num1 + num2);
-        System.out.println(num3);
         
+//      AUTOMATIC PROMOTION
+// NOTES:
+// most operations result in int or ling
+// byte/char/short values auto promoted to int prior operation
+// operation containing long, promoted to long
+// operation containing float, promoted to floating point
+// literal floating point values promoted to double
 
+// EXAMPLE1;
+//short a, b, c;
+//a = 1; //auto promoted to int type
+//b = 2; //auto promoted to int type
+//c = a + b; //compiler error ('=' operator attempts to assign int result to short value 'c')
 
+// // Solution1:
+//short a, b;
+//int c;
+//a = 1;
+//b = 2;
+//c = a + b;
+//        System.out.println(c); //correct output
 
+        
+// Solution2:
+//short a, b, c;
+//a = 1;
+//b = 2;
+//c = (short) (a + b);
+//        System.out.println(c); //correct output
+//        
+//        
 
-
+// USING A LONG
+Person person01 = new Person();
+person01.ageYears = 29;
+person01.calculateAge();
 
 
     }
     
+}
+
+
+// USING A LONG
+
+class Person {
+
+    public int ageYears = 32;
+    
+    public void calculateAge() {
+        int ageDays = ageYears * 365;
+        long ageSeconds = ageYears * 365 * 24L * 60 * 60;
+        
+        System.out.println("At " + ageYears + " years old, you are " + ageDays + " days old.");
+        System.out.println("At " + ageYears + " years old, you are " + ageSeconds + " seconds old.");
+    }
 }
