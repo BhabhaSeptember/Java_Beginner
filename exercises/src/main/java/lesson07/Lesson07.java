@@ -214,14 +214,39 @@ public class Lesson07 {
 //        
 //        
 
-// USING A LONG
-Person person01 = new Person();
-person01.ageYears = 29;
-person01.calculateAge();
+// // USING A LONG (please refer to class declaration below main method)
+//Person person01 = new Person();
+//person01.ageYears = 29;
+//person01.calculateAge();
 
 
-    }
-    
+// // USING A FLOATING POINT
+// // Example1:
+//int num1 = 1 + 2 + 3 + 4.0; //compiler error
+//int num2 = (1 + 2 + 3 + 4) * 1.0; //compiler error
+
+
+// // Solution1:
+//double num1 = 1 + 2 + 3 + 4.0; //correct output = 10.0
+//double num2 = (1 + 2 + 3 + 4) * 1.0; //correct output = 10.0
+
+
+// // Solution2:
+//int num1 = (int) (1 + 2 + 3 + 4.0); //correct output = 10.0
+//int num2 = (int) ((1 + 2 + 3 + 4) * 1.0); //correct output = 10.0
+
+
+// // FLOATING POINT DATA TYPES & ASSIGNMENT
+// // EXAMPLE1:
+//float float1 = 27.9; //compiler error (decimal numbers are auto promoted to double type unless otherwise specified)
+
+// // Solution1:
+//float float1 = 27.9F; //correct - specify float number with letter 'F'
+
+
+// // Solution2:
+//float float1 = (float) 27.9; //correct - type cast number to float type
+    }  
 }
 
 

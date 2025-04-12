@@ -76,9 +76,9 @@ public class Lesson06 {
 
 //          EXAMPLE5: REFER TO ITEM CLASS DECLARATION BELOW MAIN METHOD
 //          STORING ARRAY OF OBJECT REFERENCES IN MEMORY
-            Item item = new Item(); 
-            Item[] items = {new Item(), new Item(), new Item()};
-            
+//            Item item = new Item(); 
+//            Item[] items = {new Item(), new Item(), new Item()};
+//            
 // for item object above, reference is in stack and object is in heap
 // for items array above, reference to array is in stack,...
 //...reference to each element in the array is in heap...
