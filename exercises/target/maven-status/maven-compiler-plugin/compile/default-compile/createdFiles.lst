@@ -1,12 +1,16 @@
 ex06_2_exercise\Item.class
+ex09_2_exercise\ShoppingCart.class
 lesson08\ShoppingCart.class
 ex07_3_exercise\ShoppingCart.class
+ex09_1_exercise\Customer.class
 ex06_2_exercise\ShoppingCart.class
 ex08_1_exercise\ShoppingCart.class
 lesson06\TV.class
 ex03_exercise\ShoppingCart.class
 lesson08\ItemSizes.class
+ex09_2_exercise\Customer.class
 lesson08\Item.class
+lesson09\Lesson09$Shirt.class
 ex05_1_exercise\ShoppingCart.class
 ex08_1_exercise\Item.class
 lesson08\Lesson08.class
@@ -20,6 +24,8 @@ ex07_1_exercise\ShoppingCart.class
 lesson06\Lesson06.class
 lesson08\Calculator2.class
 ex04_1_exercise\ShoppingCart.class
+lesson09\Lesson09$Item.class
+lesson09\Lesson09.class
 ex07_2_exercise\ShoppingCart.class
 lesson06\Camera.class
 ex05_3_exercise\ShoppingCart.class
@@ -32,5 +38,6 @@ lesson08\Customer.class
 ex06_1_exercise\Item.class
 lesson06\Shirt.class
 lesson08\Shirt.class
+lesson09\Lesson09$Customer.class
 lesson06\Item.class
 lesson07\Lesson07.class
