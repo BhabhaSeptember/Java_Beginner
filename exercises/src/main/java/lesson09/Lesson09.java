@@ -67,13 +67,12 @@ public class Lesson09 {
 //        System.out.println(theShirt);
 //
 //
-//3)instantiating shirt objects using all constructors
+//3)instantiating shirt objects using the other constructors
 Shirt shirt0 = new Shirt();
         System.out.println("\n*----- No-args constructor -----*" + shirt0);
 
 Shirt shirt1 = new Shirt('R');
-        System.out.println("\n*----- 1-arg constructor -----*" + shirt1);
-        
+        System.out.println("\n*----- 1-arg constructor -----*" + shirt1);      
         
 Shirt shirt2 = new Shirt('G', 79.99);
         System.out.println("\n*----- 2-args constructor -----*" + shirt2);
