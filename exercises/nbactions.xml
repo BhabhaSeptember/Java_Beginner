@@ -12,8 +12,8 @@
             <properties>
                 <exec.vmArgs>-agentlib:jdwp=transport=dt_socket,server=n,address=${jpda.address}</exec.vmArgs>
                 <exec.args>${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs}</exec.args>
-                <exec.appArgs></exec.appArgs>
-                <exec.mainClass>lesson02.SayHello</exec.mainClass>
+                <exec.appArgs>Hello World!</exec.appArgs>
+                <exec.mainClass>${packageClassName}</exec.mainClass>
                 <exec.executable>java</exec.executable>
                 <jpda.listen>true</jpda.listen>
             </properties>
@@ -30,8 +30,8 @@
             <properties>
                 <exec.vmArgs></exec.vmArgs>
                 <exec.args>${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs}</exec.args>
-                <exec.appArgs></exec.appArgs>
-                <exec.mainClass>lesson02.SayHello</exec.mainClass>
+                <exec.appArgs>Hello World!</exec.appArgs>
+                <exec.mainClass>${packageClassName}</exec.mainClass>
                 <exec.executable>java</exec.executable>
                 
             </properties>
@@ -48,10 +48,11 @@
             <properties>
                 <exec.vmArgs></exec.vmArgs>
                 <exec.args>${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs}</exec.args>
-                <exec.appArgs></exec.appArgs>
-                <exec.mainClass>lesson02.SayHello</exec.mainClass>
+                <exec.appArgs>Hello World!</exec.appArgs>
+                <exec.mainClass>${packageClassName}</exec.mainClass>
                 <exec.executable>java</exec.executable>
             </properties>
         </action>
+        
         
     </actions>

@@ -7,6 +7,7 @@ lesson06\TV.class
 ex03_exercise\ShoppingCart.class
 ex09_2_exercise\Customer.class
 ex05_1_exercise\ShoppingCart.class
+lesson11\Lesson11.class
 ex10_2_exercise\ShoppingCart.class
 lesson06\Customer.class
 lesson03\Hello.class
@@ -19,6 +20,8 @@ lesson06\Camera.class
 ex05_3_exercise\ShoppingCart.class
 lesson07\Person.class
 lesson08\Calculator.class
+ex11_2_exercise\ShoppingCart.class
+lesson11\Lesson11$Elevator.class
 SayHello.class
 ex04_2_exercise\ShoppingCart.class
 ex10_3_exercise\Order.class
@@ -28,6 +31,7 @@ lesson09\Lesson09$Customer.class
 lesson06\Item.class
 lesson07\Lesson07.class
 ex10_2_exercise\Order.class
+ex11_1_exercise\ShoppingCart.class
 lesson08\ShoppingCart.class
 ex09_1_exercise\Customer.class
 ex10_3_exercise\ShoppingCart.class
