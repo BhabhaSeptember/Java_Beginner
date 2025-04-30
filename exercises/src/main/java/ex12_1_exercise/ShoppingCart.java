@@ -10,7 +10,7 @@ public class ShoppingCart {
 
 	// instantiate a Shirt object and call display() on the object reference
  Shirt myShirt = new Shirt(79.99, 'S', 'G');
- myShirt.display();
+ myShirt.display(); //display method is coded in the Item superclass
         System.out.println("\tSize: " + myShirt.getSize());
  
         

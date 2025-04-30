@@ -7,6 +7,7 @@ lesson06\TV.class
 ex03_exercise\ShoppingCart.class
 ex09_2_exercise\Customer.class
 ex05_1_exercise\ShoppingCart.class
+ex12_1_exercise\ShoppingCart.class
 lesson11\Lesson11.class
 ex10_2_exercise\ShoppingCart.class
 ex11_3_exercise\Item.class
@@ -14,6 +15,7 @@ lesson06\Customer.class
 lesson03\Hello.class
 lesson10\Employees.class
 ex08_2_exercise\Item.class
+ex12_2_exercise\Shirt.class
 lesson08\methodReturnTypes.class
 lesson06\Lesson06.class
 lesson12\Lesson12.class
@@ -23,6 +25,7 @@ ex05_3_exercise\ShoppingCart.class
 lesson07\Person.class
 lesson08\Calculator.class
 ex11_2_exercise\ShoppingCart.class
+lesson12\Socks.class
 lesson11\Lesson11$Elevator.class
 SayHello.class
 ex04_2_exercise\ShoppingCart.class
@@ -35,7 +38,10 @@ lesson07\Lesson07.class
 ex10_2_exercise\Order.class
 ex11_1_exercise\ShoppingCart.class
 lesson08\ShoppingCart.class
+ex12_2_exercise\ShoppingCart.class
 ex09_1_exercise\Customer.class
+ex12_1_exercise\Shirt.class
+lesson12\Trousers.class
 ex10_3_exercise\ShoppingCart.class
 lesson08\ItemSizes.class
 ex11_4_exercise\ShoppingCart.class
@@ -45,8 +51,10 @@ ex08_1_exercise\Item.class
 lesson08\Lesson08.class
 lesson12\Shirt.class
 ex08_2_exercise\ShoppingCart.class
+ex12_1_exercise\Item.class
 ex05_2_exercise\ShoppingCart.class
 ex11_3_exercise\ShoppingCart.class
+ex12_2_exercise\Item.class
 ex10_1_exercise\TestClass.class
 ex07_1_exercise\ShoppingCart.class
 lesson08\Calculator2.class

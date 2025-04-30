@@ -22,7 +22,7 @@ public class Shirt extends Item {
     private char colorCode;
 
     public Shirt(double price, char size, char colorCode) {
-        super("V-neck", price);
+        super("Shirt", price);
         this.size = size;
         this.colorCode = colorCode;
         
