@@ -16,6 +16,7 @@ lesson10\Employees.class
 ex08_2_exercise\Item.class
 lesson08\methodReturnTypes.class
 lesson06\Lesson06.class
+lesson12\Lesson12.class
 ex07_2_exercise\ShoppingCart.class
 lesson06\Camera.class
 ex05_3_exercise\ShoppingCart.class
@@ -42,6 +43,7 @@ lesson08\Item.class
 lesson09\Lesson09$Shirt.class
 ex08_1_exercise\Item.class
 lesson08\Lesson08.class
+lesson12\Shirt.class
 ex08_2_exercise\ShoppingCart.class
 ex05_2_exercise\ShoppingCart.class
 ex11_3_exercise\ShoppingCart.class
@@ -52,6 +54,7 @@ ex04_1_exercise\ShoppingCart.class
 lesson09\Lesson09$Item.class
 lesson09\Lesson09.class
 lesson04\Lesson04.class
+lesson12\Clothing.class
 lesson06\Shirt.class
 lesson08\Shirt.class
 lesson10\Lesson10.class
