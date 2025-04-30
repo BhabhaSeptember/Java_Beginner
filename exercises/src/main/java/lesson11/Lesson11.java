@@ -9,6 +9,7 @@ import java.time.*; //imports all classes in the java.time package
 import java.time.chrono.JapaneseDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
+import java.util.ArrayList;
 
 /**
  *
@@ -47,9 +48,8 @@ public class Lesson11 {
 //******************************** TODO ********************************
 //
 //EXAMPLE3 (PARSING THE ARGS ARRAY)
-System.out.println("args[0] is: " + args[0]);
-System.out.println("args[1] is: " + args[1]);
-
+//System.out.println("args[0] is: " + args[0]);
+//System.out.println("args[1] is: " + args[1]);
 //
 //
 // 
@@ -163,8 +163,78 @@ System.out.println("args[1] is: " + args[1]);
 //            }
 //            System.out.println(names[idx]);
 //        }
+//
+//
+//
+//EXAMPLE6 (NESTING LOOPS)
+//1) NESTED FOR LOOP
+//int height = 4, width = 10;
+//
+//for (int row = 0; row < height; row++) {
+//    for (int col = 0; col < width; col++) {
+//        System.out.print("@");
+//    }
+//    System.out.println();
+//}//end of outer for loop
+//
+//
+//2) NESTED WHILE LOOP
+//String name = "Bhabha";
+//String guess = "";
+//int attempts = 0;
+//while (!guess.equalsIgnoreCase(name)) {
+//    guess = "";
+//    while (guess.length() < name.length()) {
+////        note "97" is ASCII code for lowercase letter 'a' and 122 is code for 'z'
+//        char asciiChar = (char) (Math.random() * 26 + 97); //casting the random number between ASCII codes 97-122 to its character between a-z
+//        guess += asciiChar; //add these letters to guess until guess string is same length as name
+//    }
+//    attempts++;
+//}
+//        System.out.println(name + " found after " + attempts + " tries!");
+//
+//
+//
+//EXAMPLE7 (PROCESSING A 2-D ARRAY - REFER TO INITARRAY METHOD JUST BELOW MAIN METHOD - ABOVE ELEVATOR CLASS)
+//        int sales[][] = new int[3][4]; //array has 3 rows of 4 columns each
+//        initArray(sales);
+//        System.out.println("Yearly sales by quater beginning 2010: ");
+//        for (int i = 0; i < sales.length; i++) { //iterates through each year (rows)
+//            for (int j = 0; j < sales[i].length; j++) { //iterates through each quarter of the year(columns)
+//                System.out.println("\tQ" + (j + 1) + " R" + sales[i][j]);
+//            }
+//            System.out.println();
+//        }//end of outer for loop
+//
+//
+//
+//EXAMPLE8 (ARRAYLIST)
+        ArrayList<String> names; //arraylist of String object type note: arraylists can only consist of object types, not primitive data types
+        names = new ArrayList(); //dont have to specify size of arraylist when instantiating it, but if you do and you add more elements, the list will grow
+
+        names.add("Jamie"); //adding will increase the size of arraylist dynamically
+        names.add("Gustav");
+        names.add("Alisa");
+        names.add("Bhabha");
+        names.add("John");
+        names.add(2, "Prashant");//overloaded add method to insert into specified index
+//
+////removing an element reduces the size of araylis
+        names.remove(0); //removes element at index 0 i.e. first element
+        names.remove(names.size() - 1); //removes last element in list
+        names.remove("Gustav");
+
+        System.out.println(names);
 
     }//end of main method
+
+    public static void initArray(int[][] arr) {
+        for (int i = 0; i < arr.length; i++) { // for each year
+            for (int j = 0; j < arr[i].length; j++) { // for each quarter
+                arr[i][j] = (int) (Math.random() * 50_000); // random sales between 0–999
+            }
+        }
+    }//end of initArray method
 
 //================================== ELEVATOR CLASS ==================================
     static class Elevator {
@@ -203,4 +273,5 @@ System.out.println("args[1] is: " + args[1]);
 
     }//end of Elevator class   
 
+//================================== ARRAYLIST EXAMPLE CLASS ==================================
 }//end of Lesson11 class

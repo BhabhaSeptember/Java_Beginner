@@ -9,6 +9,7 @@ ex09_2_exercise\Customer.class
 ex05_1_exercise\ShoppingCart.class
 lesson11\Lesson11.class
 ex10_2_exercise\ShoppingCart.class
+ex11_3_exercise\Item.class
 lesson06\Customer.class
 lesson03\Hello.class
 lesson10\Employees.class
@@ -36,12 +37,14 @@ lesson08\ShoppingCart.class
 ex09_1_exercise\Customer.class
 ex10_3_exercise\ShoppingCart.class
 lesson08\ItemSizes.class
+ex11_4_exercise\ShoppingCart.class
 lesson08\Item.class
 lesson09\Lesson09$Shirt.class
 ex08_1_exercise\Item.class
 lesson08\Lesson08.class
 ex08_2_exercise\ShoppingCart.class
 ex05_2_exercise\ShoppingCart.class
+ex11_3_exercise\ShoppingCart.class
 ex10_1_exercise\TestClass.class
 ex07_1_exercise\ShoppingCart.class
 lesson08\Calculator2.class
