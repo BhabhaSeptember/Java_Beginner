@@ -137,7 +137,7 @@ public class Lesson12 {
 }//end of Lesson12 class
 
 //============================================ CLOTHING CLASS ============================================
-//class Clothing {
+class Clothing {
 //EXAMPLE1 (IMPLEMENTING INHERITANCE)        
 //        public void display() {
 //            System.out.println("- Clothing class display method...");
@@ -181,63 +181,61 @@ public class Lesson12 {
 //        
 //EXAMPLE3 (OVERRIDING METHODS)      
 //fields
-//    private int itemID = 0;
-//    private String desc = "-description required-";
-//    private char colorCode = 'U';
-//    private double price = 0.0;
+    private int itemID = 0;
+    private String desc = "-description required-";
+    private char colorCode = 'U';
+    private double price = 0.0;
 
 //constructor
-//    public Clothing() {
-//    }
+    public Clothing() {
+    }
 //
-//    public Clothing(int itemID, String desc, char color, double price) {
-//        this.itemID = itemID;
-//        this.desc = desc;
-//        this.colorCode = color;
-//        this.price = price;
-//    }
+    public Clothing(int itemID, String desc, char color, double price) {
+        this.itemID = itemID;
+        this.desc = desc;
+        this.colorCode = color;
+        this.price = price;
+    }
 
 //methods
-//    public void display() {
-//        System.out.println("===== CLOTHING DISPLAY METHOD =====");
-//        System.out.println("Item ID: " + getItemID());
-//        System.out.println("Item description: " + getDesc());
-//        System.out.println("Item price: " + getPrice());
-//        System.out.println("Color code: " + getColorCode());
-//    }
-//    
-// 
-//
-//    public String getDesc() {
-//        System.out.println(desc);
-//        return desc;
-//    }
-//
-//    public void setDesc(String desc) {
-//        this.desc = desc;
-//    }
-//
-//    public double getPrice() {
-//        return price;
-//    }
-//
-//    public int getItemID() {
-//        return itemID;
-//    }
-//
-//    public char getColorCode() {
-//        System.out.println("Color Code: " + colorCode);
-//        return colorCode;
-//    }
-//
-//    protected void setColorCode(char color) {
-//        System.out.println("===== CLOTHING METHOD =====");
-//        this.colorCode = color;
-//    }
-//    
+    public void display() {
+        System.out.println("===== CLOTHING DISPLAY METHOD =====");
+        System.out.println("Item ID: " + getItemID());
+        System.out.println("Item description: " + getDesc());
+        System.out.println("Item price: " + getPrice());
+        System.out.println("Color code: " + getColorCode());
+    }
+    
+ 
 
+    public String getDesc() {
+        System.out.println(desc);
+        return desc;
+    }
 
-//}//end of Clothing class
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public int getItemID() {
+        return itemID;
+    }
+
+    public char getColorCode() {
+        System.out.println("Color Code: " + colorCode);
+        return colorCode;
+    }
+
+    protected void setColorCode(char color) {
+        System.out.println("===== CLOTHING METHOD =====");
+        this.colorCode = color;
+    }
+    
+}//end of first Clothing class
 
 //============================================ ABSTRACT CLOTHING CLASS ============================================
 //EXAMPLE5 (ABSTRACT CLASSES)
