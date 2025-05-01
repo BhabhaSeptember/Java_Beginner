@@ -93,22 +93,51 @@ public class Lesson12 {
 //((Trousers)c1).getGender();
 //
 //
-//5)INSTANCE OPERATOR
+//5)INSTANCEOF OPERATOR
+//a)
 //Clothing c1 = new Trousers();
-
-
-
-
+//((Trousers)c1).setGender('F');
+//displayDetails(c1);
+//
+//
+//b)
+//Clothing c1 = new Socks();
+//displayDetails2(c1);
+//
+//
+//
+//EXAMPLE5 (ABSTRACT CLASSES)
 
 
 
 
     }//end of main method
+    
+    //EXAMPLE4 (POLYMORPHISM - INSTANCEOF OPERATOR)  
+//1)
+       public static void displayDetails(Clothing c1) {
+        c1.display();
+        char gender = ((Trousers)c1).getGender();
+        System.out.println("Gender: " + gender);
+    }//end of syntax-1
+//    
+//       
+//2)
+       public static void displayDetails2(Clothing c1) {
+           c1.display();
+           if (c1 instanceof Trousers) {
+           char gender = ((Trousers)c1).getGender();
+           System.out.println("Gender: " + gender);
+       } else {
+               System.out.println("Cannot access getGender method. This object is not an instance of Trousers class");
+               }
+       }//end of syntax-2
+    
 
 }//end of Lesson12 class
 
 //============================================ CLOTHING CLASS ============================================
-class Clothing {
+//class Clothing {
 //EXAMPLE1 (IMPLEMENTING INHERITANCE)        
 //        public void display() {
 //            System.out.println("- Clothing class display method...");
@@ -152,59 +181,79 @@ class Clothing {
 //        
 //EXAMPLE3 (OVERRIDING METHODS)      
 //fields
-    private int itemID = 0;
-    private String desc = "-description required-";
-    private char colorCode = 'U';
-    private double price = 0.0;
+//    private int itemID = 0;
+//    private String desc = "-description required-";
+//    private char colorCode = 'U';
+//    private double price = 0.0;
 
 //constructor
-    public Clothing() {
-    }
-
-    public Clothing(int itemID, String desc, char color, double price) {
-        this.itemID = itemID;
-        this.desc = desc;
-        this.colorCode = color;
-        this.price = price;
-    }
+//    public Clothing() {
+//    }
+//
+//    public Clothing(int itemID, String desc, char color, double price) {
+//        this.itemID = itemID;
+//        this.desc = desc;
+//        this.colorCode = color;
+//        this.price = price;
+//    }
 
 //methods
-    public void display() {
-        System.out.println("===== CLOTHING DISPLAY METHOD =====");
-        System.out.println("Item ID: " + getItemID());
-        System.out.println("Item description: " + getDesc());
-        System.out.println("Item price: " + getPrice());
-        System.out.println("Color code: " + getColorCode());
-    }
+//    public void display() {
+//        System.out.println("===== CLOTHING DISPLAY METHOD =====");
+//        System.out.println("Item ID: " + getItemID());
+//        System.out.println("Item description: " + getDesc());
+//        System.out.println("Item price: " + getPrice());
+//        System.out.println("Color code: " + getColorCode());
+//    }
+//    
+// 
+//
+//    public String getDesc() {
+//        System.out.println(desc);
+//        return desc;
+//    }
+//
+//    public void setDesc(String desc) {
+//        this.desc = desc;
+//    }
+//
+//    public double getPrice() {
+//        return price;
+//    }
+//
+//    public int getItemID() {
+//        return itemID;
+//    }
+//
+//    public char getColorCode() {
+//        System.out.println("Color Code: " + colorCode);
+//        return colorCode;
+//    }
+//
+//    protected void setColorCode(char color) {
+//        System.out.println("===== CLOTHING METHOD =====");
+//        this.colorCode = color;
+//    }
+//    
 
-    public String getDesc() {
-        System.out.println(desc);
-        return desc;
-    }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
-    }
+//}//end of Clothing class
 
-    public double getPrice() {
-        return price;
+//============================================ ABSTRACT CLOTHING CLASS ============================================
+//EXAMPLE5 (ABSTRACT CLASSES)
+//NOTE: abstract classes cannot be instantiated
+abstract class Clothing2 {
+    private int id;
+    
+    public int getID() { //concrete methods that do not have to be implemented by subclasses
+        return id;
     }
+    
+    protected abstract double getPrice(); //method must be implemented by its non-abstract subclasses
+    public abstract void display(); //method must be implemented by its non-abstract subclasses
+    
+}//end of Clothing2 class
 
-    public int getItemID() {
-        return itemID;
-    }
-
-    public char getColorCode() {
-        System.out.println("Color Code: " + colorCode);
-        return colorCode;
-    }
-
-    protected void setColorCode(char color) {
-        System.out.println("===== CLOTHING METHOD =====");
-        this.colorCode = color;
-    }
-
-}//end of Clothing class
 
 //============================================ SHIRT CLASS ============================================
 class Shirt extends Clothing {
@@ -303,17 +352,36 @@ class Shirt extends Clothing {
 }//end of Shirt class
 
 //============================================ SOCKS CLASS ============================================
-class Socks extends Clothing {
-
-    public Socks() {
+//1)
+//class Socks extends Clothing {
+//
+//    public Socks() {
+//    }
+//
+//    public Socks(int itemID, String description, char colorCode, double price) {
+//        super(itemID, description, colorCode, price);
+//    }
+//
+//}//end of Socks class
+//
+//2) ABSTRACT CLASSES EXAMPLE
+class Socks extends Clothing2 {
+    private double price;
+    
+    //Clothing2 abstract methods being implemented in subclass
+    protected double getPrice() { 
+        return price;
     }
-
-    public Socks(int itemID, String description, char colorCode, double price) {
-        super(itemID, description, colorCode, price);
+    
+    public void display() {
+        System.out.println("ID: " + getID());
+        System.out.println("Price: R" + getPrice());
     }
+    
+}//end of second Socks class
 
-}//end of Socks class
-//============================================ TOUSERS CLASS ============================================
+
+//============================================ TROUSERS CLASS ============================================
 
 class Trousers extends Clothing {
 
@@ -326,13 +394,17 @@ class Trousers extends Clothing {
         super(itemID, description, colorCode, price);
     }
     
-    public char getGender() {
-        System.out.println("Gender: " + gender);
+    
+//methods
+     public char getGender() {
+//        System.out.println("Gender: " + gender);
         return gender;
     }
 
     public void setGender(char gender) {
         this.gender = gender;
     }
+    
+
 
 }//end of Trousers class

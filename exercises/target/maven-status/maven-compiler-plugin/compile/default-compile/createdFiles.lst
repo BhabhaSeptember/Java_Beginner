@@ -5,6 +5,8 @@ ex06_2_exercise\ShoppingCart.class
 ex08_1_exercise\ShoppingCart.class
 lesson06\TV.class
 ex03_exercise\ShoppingCart.class
+ex12_3_exercise\Item.class
+ex12_3_exercise\Shirt.class
 ex09_2_exercise\Customer.class
 ex05_1_exercise\ShoppingCart.class
 ex12_1_exercise\ShoppingCart.class
@@ -20,6 +22,7 @@ lesson08\methodReturnTypes.class
 lesson06\Lesson06.class
 lesson12\Lesson12.class
 ex07_2_exercise\ShoppingCart.class
+ex12_3_exercise\Trousers.class
 lesson06\Camera.class
 ex05_3_exercise\ShoppingCart.class
 lesson07\Person.class
@@ -27,6 +30,7 @@ lesson08\Calculator.class
 ex11_2_exercise\ShoppingCart.class
 lesson12\Socks.class
 lesson11\Lesson11$Elevator.class
+ex12_3_exercise\ShoppingCart.class
 SayHello.class
 ex04_2_exercise\ShoppingCart.class
 ex10_3_exercise\Order.class
