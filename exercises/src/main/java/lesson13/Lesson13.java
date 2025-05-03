@@ -66,23 +66,67 @@ public class Lesson13 {
 //
 //
 //
-//=============================================== * TODO * ============================================================
+//=============================================== * TODO : GO-OVER THIS AGAIN FOR BETTER UNDERSTANDING * ============================================================
 //EXAMPLE4 (USING THE LIST INTERFACE)
 //1)
-        String[] nums = {"one", "two", "three"};
-        List<String> myList = Arrays.asList(nums); //ArrayList implements List interface 
-        System.out.println("String Array called nums: " + Arrays.toString(nums));
-        System.out.println("String List called myList: " + myList);
+//        String[] nums = {"one", "two", "three"};
+//        List<String> myList = Arrays.asList(nums); //ArrayList implements List interface 
+//        System.out.println("String Array called nums: " + Arrays.toString(nums));
+//        System.out.println("String List called myList: " + myList);
 //
 //
 //2)CONVERTING AN ARRAY TO AN ARRAYLIST
-        ArrayList<String> myArrayList = new ArrayList(Arrays.asList(nums));
-        System.out.println("String ArrayList called myArrayList: " + myArrayList);
-
-        
-        
-        
+//        ArrayList<String> myArrayList = new ArrayList(Arrays.asList(nums));
+//        System.out.println("String ArrayList called myArrayList: " + myArrayList);
+//    
+//
+//
 //=============================================== * END OF TODO * ============================================================
+//
+//EXAMPLE5 (INTRO TO LAMBDA EXPRESSIONS)
+//1)MODIFYING A LIST OF NAMES
+        String[] names = {"Bhabha", "Ned", "Fred", "Jessie", "Alice", "Rick"};
+        List<String> myList = new ArrayList(Arrays.asList(names));
+
+//toUpperCase() method below prints the names out in uppercase but does not change the actual list element values themselves
+//Note: String objects are immutable, in the example below, we create a new String with uppercase element values...
+//...then we reassign reference to point to new String. we do not actually change the values in place
+        for (String s : myList) {
+            System.out.println(s.toUpperCase() + ", ");
+        }
+        System.out.println("After for loop: " + myList);
+//
+//
+//
+//2)USING LAMBDA EXPRESSION WITH REPLACEALL
+//lambda expressions are concrete methods for an interface, expressed in a new way
+//a)
+myList.replaceAll((String s) -> {
+    return s.toUpperCase();
+}); //long version of lambda expressions
+//b)
+myList.replaceAll(s -> s.toUpperCase()); //short version of lambda expression
+System.out.println("List.replaceAll labmda: " + myList);
+//
+//
+//3)THE UNARYOPERATOR LAMBDA TYPE
+//has single input and returns value of same type as input
+//e.g) myList.replaceAll(s -> s.toUpperCase() );
+//
+//4)THE PREDICATE LAMBDA TYPE
+//takes a single input and returns a boolean
+//e.g)
+myList.removeIf(s -> s.equalsIgnoreCase("Rick"));
+        System.out.println("After removing Rick: " + myList);
+myList.removeIf (s -> s.length() < 5);
+        System.out.println("After removing string less than 5 char: " + myList);
+
+
+
+
+
+
+
     }//end of main method
 
 }//end of Lesson13 class
