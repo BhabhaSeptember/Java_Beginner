@@ -16,6 +16,7 @@ ex12_1_exercise\ShoppingCart.class
 lesson11\Lesson11.class
 ex10_2_exercise\ShoppingCart.class
 lesson13\First.class
+lesson14\Lesson14.class
 ex11_3_exercise\Item.class
 lesson06\Customer.class
 lesson03\Hello.class
@@ -52,11 +53,12 @@ ex10_2_exercise\Order.class
 lesson13\Lesson13.class
 ex11_1_exercise\ShoppingCart.class
 lesson08\ShoppingCart.class
-lesson14\Lesson15.class
+ex14_1_exercise\ShoppingCart.class
 ex12_2_exercise\ShoppingCart.class
 ex09_1_exercise\Customer.class
 ex12_1_exercise\Shirt.class
 lesson12\Trousers.class
+lesson14\Utils.class
 ex13_2_exercise\Shirt.class
 lesson12\Clothing2.class
 ex10_3_exercise\ShoppingCart.class
@@ -75,6 +77,7 @@ ex12_1_exercise\Item.class
 ex05_2_exercise\ShoppingCart.class
 ex11_3_exercise\ShoppingCart.class
 ex12_2_exercise\Item.class
+ex14_1_exercise\Calculator.class
 ex10_1_exercise\TestClass.class
 ex07_1_exercise\ShoppingCart.class
 lesson08\Calculator2.class
@@ -85,4 +88,5 @@ lesson04\Lesson04.class
 lesson12\Clothing.class
 lesson06\Shirt.class
 lesson08\Shirt.class
+lesson14\TestClass.class
 lesson10\Lesson10.class
