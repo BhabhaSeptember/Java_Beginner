@@ -16,11 +16,9 @@ public class Lesson06 {
 //Creating/Instantiating new object instances of Customer class 
 //        Customer customer01 = new Customer();
 //        Customer customer02 = new Customer();
-
 //Accessing the fields inside the Customer class and assigning values to each       
 //        customer01.age = 40;
 //        customer02.name = "Duke";
-
 //Calling Customer class methods on Customer type objects       
 //        customer01.displayCustomer();
 //        customer02.displayCustomer();
@@ -48,55 +46,65 @@ public class Lesson06 {
 //References are not limited to a single object type          
 //          TV remote3 = new TV();
 //          remote3.name = "Remote3";
-          
 //Same methods are called below but each reference is of a different object types
 //Therefore the reference will determine which classes method the object calls upon 
 //          remote1.menu(); 
 //          remote3.menu();
-
 //          EXAMPLE3: REFER TO SHIRT CLASS DECLARATION BELOW MAIN METHOD
 //          References and objects in memory
 //Object with its fields/attributes sits in heap memory but the variable reference to it sits in stack memory
-            int counter = 10;
-            Shirt myShirt = new Shirt(); 
-            Shirt yourShirt = new Shirt(); 
-//            
+//            int counter = 10;
+//            Shirt myShirt = new Shirt(); 
+//            Shirt yourShirt = new Shirt(); 
+////            
 //Below we assign myShirt reference to the yourShirt's object
 //myShirt reference drops its object in the heap and points to yourShirt's object in heap
 //i.e. myShirt reference & yourShirt reference point to same object now
 //If no other references for myShirt object exist, it will be later garbage collected
-            myShirt = yourShirt; 
-                       
+//            myShirt = yourShirt; 
 //Below we have two references to one object, accessing and changing the color attribute 
 //Both outputs will be the same result because they both point to the same object
-            myShirt.color = "Red";
-            System.out.println("My Shirt color: " + myShirt.color);
-            System.out.println("Your Shirt color: " + yourShirt.color);
-            
-            yourShirt.color = "Green"; 
-            System.out.println("\nMy Shirt color: " + myShirt.color); 
-            System.out.println("Your Shirt color: " + yourShirt.color);
-            
-//          EXAMPLE4: WORKING WITH ARRAYS
-//            String[] names = {"Mary", "Bob", "Carlos"};
+//            myShirt.color = "Red";
+//            System.out.println("My Shirt color: " + myShirt.color);
+//            System.out.println("Your Shirt color: " + yourShirt.color);
 //            
-//            int[] ages = new int[3]; //Arrays are an object type of a class called Array
-//            ages[0] = 19;
+//            yourShirt.color = "Green"; 
+//            System.out.println("\nMy Shirt color: " + myShirt.color); 
+//            System.out.println("Your Shirt color: " + yourShirt.color);
+//
+//
+//          EXAMPLE4: WORKING WITH ARRAYS
+//Arrays are handled by an implicit Array object
+//Array variable is an object reference, not a primitive data type
+//Therefore it must be instantiated like other objects
+//Below, we declare, istantiate and initialize and array of type String called names with 3 elements in one step
+//        String[] names = {"Mary", "Bob", "Carlos"};
+
+//Below we use a multistep approach 
+//The ages array is stored in stack memory as an object reference variable
+//        int[] ages = new int[3]; //Declare & instantiate an int type array Array with 3 elements
+
+//Then we initialize the elements in the array
+//            ages[0] = 19; 
 //            ages[1] = 42;
 //            ages[2] = 92;
-//            
-//            int age = 35; //stored in stack memory 
-//            //int ages array would have a reference in the stack and the actual array object in the heap memory
+//
+//
+//Storing Arrays In Memory
+//The age variable is an int primitive data type and it's value is stored in stack memory 
+//            int age = 35; 
+//
+//
 //
 //          EXAMPLE5: REFER TO ITEM CLASS DECLARATION BELOW MAIN METHOD
-//          STORING ARRAY OF OBJECT REFERENCES IN MEMORY
+//STORING ARRAY OF OBJECT REFERENCES IN MEMORY
+//For item object below, object variable reference is in stack and object with its fields is in heap
 //            Item item = new Item(); 
+//
+//For items array below, array object reference is in stack, then
+//Object reference to each object element in the array is in heap, then
+//Actual objects with their fields for each array is also in heap memory
 //            Item[] items = {new Item(), new Item(), new Item()};
-//            
-// for item object above, reference is in stack and object is in heap
-// for items array above, reference to array is in stack,...
-//...reference to each element in the array is in heap...
-//...and objects for each array are also in heap
     }//end of main method
 
 }//end of Lesson6 Class

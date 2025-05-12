@@ -27,11 +27,9 @@ public class League {
 
         League theLeague = new League();
 
-        /* Practice 14-1, Step 3a. Start a try block here */
         try {
 
-            /* Practice 14-1, Step 2a. Modify the line below to add more teams and players */
-            Team[] theTeams = theLeague.createTeams("The Robins,The Crows,The Swallows", 15);
+            Team[] theTeams = theLeague.createTeams("The Robins,The Crows,The Swallows",7);
             Game[] theGames = theLeague.createGames(theTeams);
 
             System.out.println(theLeague.getLeagueAnnouncement(theGames));
@@ -44,16 +42,15 @@ public class League {
             theLeague.showBestTeam(theTeams);
             theLeague.showBestPlayers(theTeams);
 
-            /* Practice 14-1, Step 3b. Close the try block here */
+            
         } 
-        /* Practice 14-1, Step 3d. Add a catch block here */
         catch (Exception e) {
             e.printStackTrace(System.err);
         }
 
     }
 
-    /* Practice 14-1, Step 6e. Modify the signature to throw PlayerDatabaseException */
+    
     public Team[] createTeams(String teamNames, int teamSize) throws PlayerDatabaseException {
 
         PlayerDatabase playerDB = new PlayerDatabase();
@@ -89,15 +86,15 @@ public class League {
 
         Arrays.sort(theTeams);
         Team currBestTeam = theTeams[0];
-        System.out.println("\nTeam Points");
+        System.out.println("\n <=== Team Points ===>");
 
         for (Team currTeam : theTeams) {
-            System.out.println(currTeam.getTeamName() + " : " + currTeam.getPointsTotal() + " : "
+            System.out.println(currTeam.getTeamName() + " : Points = " + currTeam.getPointsTotal() + " || Goals Scored = "
                     + currTeam.getGoalsTotal());
 
         }
 
-        System.out.println("Winner of the League is " + currBestTeam.getTeamName());
+        System.out.println("\nWinner of the League is: " + currBestTeam.getTeamName() + "!!!!!");
 
     }
 
@@ -106,9 +103,9 @@ public class League {
         Period thePeriod = Period.between(theGames[0].getTheDateTime().toLocalDate(),
                 theGames[theGames.length - 1].getTheDateTime().toLocalDate());
 
-        return "The league is scheduled to run for "
+        return "<----- The league is scheduled to run for "
                 + thePeriod.getMonths() + " month(s), and "
-                + thePeriod.getDays() + " day(s)\n";
+                + thePeriod.getDays() + " day(s)----> \n ";
     }
 
     public void showBestPlayers(Team[] theTeams) {
@@ -119,7 +116,7 @@ public class League {
 
         Collections.sort(thePlayers, (p1, p2) -> Double.valueOf(p2.getGoalsScored()).compareTo(Double.valueOf(p1.getGoalsScored())));
 
-        System.out.println("\n\nBest Players");
+        System.out.println("\n\n <=== Best Players ===>");
         for (Player currPlayer : thePlayers) {
             System.out.println(currPlayer.getPlayerName() + " : " + currPlayer.getGoalsScored());
         }
