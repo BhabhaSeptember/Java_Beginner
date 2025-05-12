@@ -29,7 +29,7 @@ public class Lesson13 {
 //System.out.println(myShirt1);//without overriding toString method, the inherited Object class toString method is used
 //
 //2)
-//Shirt myShirt2 = new Shirt("V-Neck", 69.99, 'G'); 
+//Shirt myShirt2 = new Shirt(101, "V-Neck", 69.99, 'S', 'G'); 
 //System.out.println(myShirt2);
 //
 //
@@ -37,14 +37,16 @@ public class Lesson13 {
 //EXAMPLE3 (INTERFACES - REFER TO SHIRT & RETURNABLE CLASSES)
 //1)IMPLEMENTING THE RETURNABLE INTERFACE
 //        Shirt shirt01 = new Shirt();
+//        Trousers t1 = new Trousers();
 //        System.out.println(shirt01.doReturn());
+//        System.out.println(t1.doReturn());
 //
 //
 //
 //2)ACCESS TO OBJECT METHODS FROM THE INTERFACE
-//Clothing c1 = new Trousers(1, "Trousers-Clothing", 109.99, 'S', 'R', 'F'); //has access to Clothing methods
-//Trousers t1 = new Trousers(2, "Trousers-Trousers", 250, 'M', 'R', 'F'); //has access to Trousers & Clothing methods
-//Returnable r1 = new Trousers(3, "Returnable-Trousers,", 279.99, 'L', 'R', 'F'); //has accesst to Returnable methods
+Clothing c1 = new Trousers(1, "Trousers-Clothing", 109.99, 'S', 'R', 'F'); //has access to Clothing methods
+Trousers t1 = new Trousers(2, "Trousers-Trousers", 250, 'M', 'R', 'F'); //has access to Trousers & Clothing methods
+Returnable r1 = new Trousers(3, "Returnable-Trousers,", 279.99, 'L', 'R', 'F'); //has accesst to Returnable methods
 
 //CLOTHING METHODS TEST
 //c1.getID();
@@ -64,16 +66,25 @@ public class Lesson13 {
 //((Trousers) c1).getGender();//casting to Trousers type gives object access to Trousers methods
 //((Trousers) r1).getGender();
 //
+//USE INSTANCEOF TO AVOID INAPPROPRIATE CASTS
+//if (r1 instanceof Trousers) {
+//    ((Trousers) r1).getGender();
+//    }
 //
-//
-//=============================================== * TODO : GO-OVER THIS AGAIN FOR BETTER UNDERSTANDING * ============================================================
 //EXAMPLE4 (USING THE LIST INTERFACE)
+//SUMMARY:
+//Creates a string array named nums with three elements: "one", "two", "three"
+//Converts the array into a fixed-size list using Arrays.asList()
+//We store an ArrayList object reference in a variable of type List because ArrayList implements interface
+//The list is backed by the original array (nums), meaning changes to one affect the other
+//Prints the array as a readable string
+//Prints the list
 //1)
 //        String[] nums = {"one", "two", "three"};
 //        List<String> myList = Arrays.asList(nums); //ArrayList implements List interface 
 //        System.out.println("String Array called nums: " + Arrays.toString(nums));
 //        System.out.println("String List called myList: " + myList);
-//
+////
 //
 //2)CONVERTING AN ARRAY TO AN ARRAYLIST
 //        ArrayList<String> myArrayList = new ArrayList(Arrays.asList(nums));
@@ -81,32 +92,31 @@ public class Lesson13 {
 //    
 //
 //
-//=============================================== * END OF TODO * ============================================================
 //
 //EXAMPLE5 (INTRO TO LAMBDA EXPRESSIONS)
-//1)MODIFYING A LIST OF NAMES
+//1)MODIFYING A LIST OF NAMES TO UPPERCASE
         String[] names = {"Bhabha", "Ned", "Fred", "Jessie", "Alice", "Rick"};
         List<String> myList = new ArrayList(Arrays.asList(names));
 
 //toUpperCase() method below prints the names out in uppercase but does not change the actual list element values themselves
 //Note: String objects are immutable, in the example below, we create a new String with uppercase element values...
 //...then we reassign reference to point to new String. we do not actually change the values in place
-        for (String s : myList) {
-            System.out.println(s.toUpperCase() + ", ");
-        }
-        System.out.println("After for loop: " + myList);
+//        for (String s : myList) {
+//            System.out.println(s.toUpperCase() + ", ");
+//        }
+//        System.out.println("After for loop: " + myList);
 //
 //
 //
 //2)USING LAMBDA EXPRESSION WITH REPLACEALL
 //lambda expressions are concrete methods for an interface, expressed in a new way
 //a)
-myList.replaceAll((String s) -> {
-    return s.toUpperCase();
-}); //long version of lambda expressions
+//myList.replaceAll((String s) -> {
+//    return s.toUpperCase();
+//}); //long version of lambda expressions
 //b)
-myList.replaceAll(s -> s.toUpperCase()); //short version of lambda expression
-System.out.println("List.replaceAll labmda: " + myList);
+//myList.replaceAll(s -> s.toUpperCase()); //short version of lambda expression
+//System.out.println("List.replaceAll labmda: " + myList);
 //
 //
 //3)THE UNARYOPERATOR LAMBDA TYPE
@@ -118,8 +128,9 @@ System.out.println("List.replaceAll labmda: " + myList);
 //e.g)
 myList.removeIf(s -> s.equalsIgnoreCase("Rick"));
         System.out.println("After removing Rick: " + myList);
-myList.removeIf (s -> s.length() < 5);
-        System.out.println("After removing string less than 5 char: " + myList);
+        
+//myList.removeIf (s -> s.length() < 5);
+//        System.out.println("After removing string less than 5 char: " + myList);
 
 
 
@@ -203,7 +214,7 @@ class Clothing {
 
     @Override
     public String toString() {
-        return "This shirt is a " + desc + ";\n Price = R"
+        return "This clothing is a " + desc + ";\n Price = R"
                 + getPrice() + ",\n Color Code = " + getColorCode();
 
     }
