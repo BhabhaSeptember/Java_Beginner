@@ -41,7 +41,7 @@ public class Lesson06 {
 //          remote1.play(); //output = remote1 is playing video
 //          remote2.play(); //output = remote1 is playing video
 //          remote2.stop(); //output = remote1 is stopping video play
-//          
+////          
 //          System.out.println("");
 //References are not limited to a single object type          
 //          TV remote3 = new TV();
@@ -50,6 +50,8 @@ public class Lesson06 {
 //Therefore the reference will determine which classes method the object calls upon 
 //          remote1.menu(); 
 //          remote3.menu();
+
+
 //          EXAMPLE3: REFER TO SHIRT CLASS DECLARATION BELOW MAIN METHOD
 //          References and objects in memory
 //Object with its fields/attributes sits in heap memory but the variable reference to it sits in stack memory
@@ -71,7 +73,7 @@ public class Lesson06 {
 //            yourShirt.color = "Green"; 
 //            System.out.println("\nMy Shirt color: " + myShirt.color); 
 //            System.out.println("Your Shirt color: " + yourShirt.color);
-//
+////
 //
 //          EXAMPLE4: WORKING WITH ARRAYS
 //Arrays are handled by an implicit Array object
