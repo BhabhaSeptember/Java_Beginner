@@ -13,50 +13,72 @@ public class Lesson07 {
         
 //        STRING CLASS 
 //String class is immutable i.e. value cannot be changed
-//System.out.println("========== String Class ==========");
-//String  hisName = "Fred Smith";
-//        System.out.println("His Name: " + hisName);
-//
-//String herName = new String("Anne Smith\n");
-//        System.out.println("Her Name: " + herName);
+System.out.println("========== String Class ==========");
+//SUMMARY: 
+//A string variable hisName is created and initialized directly using a string literal
+//This stores "Fred Smith" in the variable hisName
+//The program prints the value of hisName with the label "His Name:"
+//Output: His Name: Fred Smith
+String  hisName = "Fred Smith"; //creates 1 String object in memory
+        System.out.println("His Name: " + hisName);
+
+//SUMMARY:
+//A second string variable herName is created using the new String(...) constructor
+//Although this works, it's not necessary to use new String(...)—just using "Anne Smith\n" would suffice in most cases
+//The \n adds a newline at the end
+//The program prints the value of herName with the label "Her Name:"
+//Output: Her Name: Anne Smith
+String herName = new String("Anne Smith\n"); //Creates 2 String objects in memeory
+        System.out.println("Her Name: " + herName);
 
         
         
 //         CONCATENATION OF STRINGS
 //below we are not changing value of string, we are adding to it and a new object sits in the heap...
-//...the original string object also sits until garbage collector removes it
-//System.out.println("========== Concatenating Strings ==========");
-//String myString = "Hello";
-//        System.out.println("1. " + myString);
-//myString = myString.concat(" World!"); //now myString reference points to new object in heap memory
-//System.out.println("2. " + myString);
-//myString = myString + "!";
-//        System.out.println("3. " + myString + "\n");
+//...the original string object also sits until garbage collector removes it 
+System.out.println("========== Concatenating Strings ==========");
+//SUMMARY
+//Declare and initialize a string: myString is initialized with "Hello"
+//Output: 1. Hello
+//Concatenate " World!" using .concat() method
+//The concat() method returns a new string, since String is immutable
+//myString is now "Hello World!"
+//Output: 2. Hello World!
+//Append "!" using + operator. The + operator also creates a new string
+//myString becomes "Hello World!!". \n adds a newline after the output
+//Output: 3. Hello World!!
+String myString = "Hello";
+        System.out.println("1. " + myString);
+myString = myString.concat(" World!"); //now myString reference points to new object in heap memory
+System.out.println("2. " + myString);
+myString = myString + "!";
+        System.out.println("3. " + myString + "\n");
 //        
-//        
-        
+//               
 //          STRING METHODS     
-//System.out.println("========= String Methods ==========");
-//String hello = "Hello World";
-//int stringLength = hello.length();
-//        System.out.println("The string '" + hello + "' has length of: " + stringLength);
+System.out.println("========= String Methods ==========");
+//String Method Calls With Primitive Return Values
+//A Method call can return a single value of any type
+String hello = "Hello World";
+int stringLength = hello.length();
+        System.out.println("The string '" + hello + "' has a length of: " + stringLength);
 //
-//        System.out.println("");
-//String greet = " HOW ".trim(); //removes whitespaces
-//System.out.println("1. " + greet);
-//String lc = greet + "DY".toLowerCase();
-//        System.out.println("2. " + lc);
-//String lc2 = (greet + "DY").toLowerCase();
-//        System.out.println("3. " + lc2);
+        System.out.println("");
+String greet = " HOW ".trim(); //removes whitespaces
+System.out.println("1. " + greet);
+String lc = greet + "DY".toLowerCase();
+        System.out.println("2. " + lc);
+String lc2 = (greet + "DY").toLowerCase();
+        System.out.println("3. " + lc2);
 //        
 //
-//        System.out.println("");        
-//String phoneNum = "404-543-2345";
-//int idx1 = phoneNum.indexOf('-');
-//        System.out.println("Index of first dash: " + idx1);
+        System.out.println("");        
+String phoneNum = "404-543-2345";
+int idx1 = phoneNum.indexOf('-');
+        System.out.println("Index of first dash: " + idx1);
 //
-//int idx2 = phoneNum.indexOf("-", idx1+1);
-//        System.out.println("Index of second dash: " + idx2);
+int idx2 = phoneNum.indexOf("-", idx1+1);
+        System.out.println("Index of second dash: " + idx2);
 
 
 //        STRINGBUILDER CLASS
@@ -250,7 +272,7 @@ public class Lesson07 {
 }
 
 
-// USING A LONG
+// USING A LONG EXAMPLE
 
 class Person {
 
