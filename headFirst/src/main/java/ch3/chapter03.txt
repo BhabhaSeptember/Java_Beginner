@@ -1,0 +1,32 @@
+----- Page 52 Exercise -----
+
+ 1. int x = 34.5;     //illegal
+ 2. boolean boo = x;  //illegal
+ 3. int g = 17;       //legal
+ 4. int y = g;        //legal
+ 5. y = y + 10;       //legal
+ 6. short s;          //legal
+ 7. s = y;            //illegal
+ 8. byte b = 3;       //legal
+ 9. byte v = b;       //legal
+ 10. short n = 12;    //legal
+ 11. v = n;           //illegal
+ 12. byte k = 128;    //illegal
+
+
+----- Page 60 Exercise -----
+
+1) What is the current value of pets[2]? 
+Answer : null
+it is a dog object, reference variable with no Dog object referenced by it 
+
+2) What code would make pets[3] refer to on of the two existing Dog objects?
+Answer : 
+pets[3] = pets[0];
+
+
+
+
+
+
+

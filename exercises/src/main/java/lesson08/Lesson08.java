@@ -166,6 +166,7 @@ System.out.println("Item2 Size: "  + item2.size);
 //
 //
 //EXAMPLE6 (REFER TO CALCULATOR2 CLASS BELOW)
+//Demonstrating Method Overloading
 Calculator2 calcTest = new Calculator2();
 
 int totalOne = calcTest.sum(2, 3);
@@ -192,6 +193,15 @@ float totalThree = calcTest.sum(2, 12.85F);
     }
     
 //example2:    
+//SUMMARY:    
+//This is a static method named changeShirtColor2 that
+//Accepts a Shirt object (theShirt) and a char (color) as parameters.
+//Creates a new Shirt object inside the method, reassigning the theShirt reference to this new object
+//Sets the colorCode of the new Shirt object to the provided color
+//Prints the color of this newly created Shirt    
+//The original Shirt object passed in is not modified, because the reference is overwritten inside the method.
+//The method only changes and prints the color of the newly created Shirt, not the one passed as an argument.
+    
     public static void changeShirtColor2(Shirt theShirt, char color) { //method parameter points to a theShirt object created below
         theShirt = new Shirt(); //here the reference value passed to method is this new theShirt 
         theShirt.colorCode = color;
