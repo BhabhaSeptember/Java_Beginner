@@ -132,7 +132,7 @@ item1.setSize(ItemSizes.mMed); //item object calling static variable from the It
 //Prints the size of item2
 //To demonstrate how a static method from one class can be called directly
 //using the class name to provide data used by an instance method of another class
-Item item2 = new Item();       
+Item item2 = new Item();    
 item2.setSize(ItemSizes.setMSmall()); //accessing static method from another class
 System.out.println("Item2 Size: "  + item2.size);
 //
@@ -220,7 +220,7 @@ class Shirt {
 //CONSTRUCTORS
 //(1)
 //SUMMARY:
-//This is a constructor for the Shirt class that takes three parameters:   
+//This is a constructor for the Shirt class that takes three arguments:   
 //desc (shirt description), color (shirt color as a string), price (shirt price as a double)
 //Calls two methods: setFields(desc, price) which sets the description and price. and..
 //setColor(color) which sets the color using the color name     
@@ -272,7 +272,7 @@ class Shirt {
 //This is a method named setFields defined in a Shirt class  
 //Takes three parameters: desc (a String for the shirt's description), color (a char representing a color code) and 
 //price (a double for the shirt's price)
-//Assigns these parameters to the object's instance variables using this
+//Assigns these parameters to the object's instance variables using 'this'
 //Prints the shirt's details to the console in a formatted way    
     public void setFields(String desc, char color, double price) {
         this.description = desc;
@@ -318,12 +318,12 @@ class Calculator {
 //This is a method named calculate that takes two parameters: x (an integer), y (a double)
 //Performs division of x by y then prints the result   
     public void calculate(int x, double y) { //parameters are values defined in method declaration
-        System.out.println("1) " + x + " / " + y + " = " + (x / y));
+        System.out.println("\n1) " + x + " / " + y + " = " + (x / y));
     }
 
 //EXAMPLE2:
 //SUMMARY:    
-//This is a method named calculate that takes no parameters but imply prints a message
+//This is a method named calculate that takes no arguments but simply prints a message
     public void calculate() {
         System.out.println("2) No parameters");
     }
