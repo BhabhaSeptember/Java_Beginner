@@ -71,5 +71,5 @@ public class Mixed2 {
 //4)
 //a2.m1();
 //a2.m2();
-//a2.m3();              B’s m1, A’s m2, C’s m3, 13
+//a2.m3();             B’s m1, A’s m2, C’s m3, 13
 //

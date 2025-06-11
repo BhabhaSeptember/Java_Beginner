@@ -7,6 +7,7 @@ public class Overloads {
     return a + b;
   }
 
+//Return type and argument list is different  
   public double addNums(double a, double b) {
     return a + b;
   }
@@ -16,6 +17,7 @@ public class Overloads {
     uniqueID = theID;
   }
 
+//Return type is the same but argument list is different  
   public void setUniqueID(int ssNumber) {
     String numString = "" + ssNumber;
     setUniqueID(numString);
